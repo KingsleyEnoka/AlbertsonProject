@@ -8,9 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+  @StateObject private var vm = AlbertsonsViewModel()
+  
     var body: some View {
-        Text("Hello, world!")
+      ScrollView {
+        VStack {
+          AsyncImage(
+            url: URL(string: "\(catImageBaseURL)\(vm.changedSize)/\(vm.changedSize)"),
+            content: { image in
+            image.resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(maxWidth: 300, maxHeight: 300)
+            },
+            placeholder: {
+              ProgressView()
+            }
+          )
+          Text(vm.fact)
+            .multilineTextAlignment(.leading)
             .padding()
+          Spacer()
+        }
+        .onTapGesture {
+          vm.changeSize()
+          Task {
+            await vm.getRandomCatFact()
+          }
+        }
+        .task {
+          await vm.getRandomCatFact()
+        }
+      }
     }
 }
 
