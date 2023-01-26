@@ -68,6 +68,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52B5AF882983392E00989B46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52F4A72E298332FA003E51F0 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52B5AF892983393B00989B46 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				52F4A73A2983334C003E51F0 /* AlbertsonViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		52B5AF8A2983394800989B46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52F4A73C29833367003E51F0 /* AlbertsonsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52B5AF8B2983397D00989B46 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				52F4A75329833440003E51F0 /* MockSession.swift */,
+				52F4A7512983340B003E51F0 /* MockNetworkLayer.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		52B5AF8C2983398D00989B46 /* ViewModelTest */ = {
+			isa = PBXGroup;
+			children = (
+				52F4A74F298333E4003E51F0 /* AlbertsonsViewModelTest.swift */,
+			);
+			path = ViewModelTest;
+			sourceTree = "<group>";
+		};
 		52F4A720298332FA003E51F0 = {
 			isa = PBXGroup;
 			children = (
@@ -89,12 +130,12 @@
 		52F4A72B298332FA003E51F0 /* AlbertsonProject */ = {
 			isa = PBXGroup;
 			children = (
+				52B5AF8A2983394800989B46 /* Models */,
+				52B5AF892983393B00989B46 /* ViewModels */,
+				52B5AF882983392E00989B46 /* Views */,
 				52F4A72C298332FA003E51F0 /* AlbertsonProjectApp.swift */,
-				52F4A72E298332FA003E51F0 /* ContentView.swift */,
 				52F4A730298332FD003E51F0 /* Assets.xcassets */,
 				52F4A732298332FD003E51F0 /* Preview Content */,
-				52F4A73A2983334C003E51F0 /* AlbertsonViewModel.swift */,
-				52F4A73C29833367003E51F0 /* AlbertsonsModel.swift */,
 				52F4A73E29833384003E51F0 /* NetworkLayer.swift */,
 				52F4A740298333A8003E51F0 /* Constants.swift */,
 			);
@@ -112,10 +153,9 @@
 		52F4A747298333C7003E51F0 /* AlbertsonProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				52B5AF8C2983398D00989B46 /* ViewModelTest */,
+				52B5AF8B2983397D00989B46 /* Mocks */,
 				52F4A748298333C7003E51F0 /* AlbertsonProjectTests.swift */,
-				52F4A74F298333E4003E51F0 /* AlbertsonsViewModelTest.swift */,
-				52F4A7512983340B003E51F0 /* MockNetworkLayer.swift */,
-				52F4A75329833440003E51F0 /* MockSession.swift */,
 				52F4A7552983345F003E51F0 /* NetworkLayerTests.swift */,
 			);
 			path = AlbertsonProjectTests;

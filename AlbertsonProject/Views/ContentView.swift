@@ -29,13 +29,14 @@ struct ContentView: View {
             .padding()
           Spacer()
         }
-        .onTapGesture {
-          vm.changeSize()
-          Task {
-            await vm.getRandomCatFact()
-          }
-        }
+        
         .task {
+          await vm.getRandomCatFact()
+        }
+      }
+      .onTapGesture {
+        vm.changeSize()
+        Task {
           await vm.getRandomCatFact()
         }
       }
